@@ -1,5 +1,6 @@
-#Expense tracker.
+# Expense tracker.
 
+### Requirements:
 Create an application based on MERN stack for the following use cases.
 
 - Users can sign up (first name, last name, email, password), login.
