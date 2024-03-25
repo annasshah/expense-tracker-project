@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "expense-tracker",
+  "workspaces": [
+    "packages/*"
+  ],
+  "version": "1.0.0",
+  "scripts": {
+    "server:start": "yarn workspace @expense-tracker/server server",
+    "client:start": "yarn workspace @expense-tracker/web-client start",
+    "client:build": "yarn workspace @expense-tracker/web-client build",
+    "start:all": "concurrently \"npm run server:start\" \"npm run client:start\"",
+    "reset": "rm -rf ./node_modules && rm -rf package-lock.json && rm -rf ./packages/*/node_modules && rm -rf *.lock && rm -rf ./packages/*/node_modules/*.lock && yarn install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
